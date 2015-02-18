@@ -1,17 +1,20 @@
 <html>
 <head>
 	<title>Random Entertainment</title>
+	<link rel='stylesheet' href='index.css' type='text/css'> 
 </head>
 <body>
-	<h3>Screw spam adverts. Get useful suggestions tailored for you!</h3>
-	<h2>Routing you to something fun and random...</h2>
-	<h1 id='counter'>5</h1>
+	<div class='text'>
+		<h3>Screw spam adverts. Get useful suggestions tailored for you!</h3>
+		<h2>Routing you to something fun and random...</h2>
+		<h1 id='counter'>5</h1>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 <script>
 	var sites = [
-		'http://bit.ly/dogedodge',
-		''
+		'http://google.com',
+		'http://youtube.com'
 	];
 
 	$(document).ready(function(){
@@ -34,11 +37,12 @@
 			//pick random site and send out
 
 			//pick random array index for target URL
-			var target = sites.length*Math.floor((Math.random());
+			var target = (Math.floor(Math.random()))*sites.length;
 			//get target URL
 			target = sites[target];
 
 			//redirect user to the target
+			window.location = target;
 		}
 	})
 </script>
